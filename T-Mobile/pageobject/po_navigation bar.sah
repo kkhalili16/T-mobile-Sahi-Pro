@@ -1,0 +1,11 @@
+function navigationBar(){
+$url = "https://www.t-mobile.com";
+	
+_navigateTo($url);
+
+
+	
+	
+	
+	
+}
