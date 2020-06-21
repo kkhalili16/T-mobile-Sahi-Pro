@@ -1,5 +1,20 @@
 function navigationBar(){
-$url = "https://www.t-mobile.com";
+//var $url= "https://www.t-mobile.com";
+var $plans= _byXPath("//a[@id='digital-header-nav-link-head-0']");
+var $plansHiddenDropDown= _byXPath("//div[@class='dropdown__menu ng-tns-c3-1 ng-trigger ng-trigger-centerX ng-star-inserted']");
+var $Magenta= _byXPath("//div[@class='dropdown__menu ng-tns-c3-1 ng-trigger ng-trigger-centerX ng-star-inserted']//a[1]//span[1]");
+
+//Hover on plans.
+_mouseOver($plans);
+_assertExists($plansHiddenDropDown);
+_assertVisible($plansHiddenDropDown);
+
+var $plans_list = ["Magenta®"];
+_assertEqual($plans_list[$i], _getText($Magenta));
+
+
+
+
 	
 _navigateTo($url);
 
